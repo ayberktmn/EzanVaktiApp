@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_nav"
+    app:startDestination="@id/sehirlerFragment">
+    <fragment
+        android:id="@+id/sehirlerFragment"
+        android:name="com.ayberk.universtyapp.SehirlerFragment"
+        android:label="fragment_sehirler"
+        tools:layout="@layout/fragment_sehirler" >
+        <action
+            android:id="@+id/action_sehirlerFragment_to_ezanSaatleriFragment"
+            app:destination="@id/ezanSaatleriFragment" />
+        <action
+            android:id="@+id/action_sehirlerFragment_to_ankaraEzanFragment"
+            app:destination="@id/ankaraEzanFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ezanSaatleriFragment"
+        android:name="com.ayberk.universtyapp.EzanSaatleriFragment"
+        android:label="fragment_ezan_saatleri"
+        tools:layout="@layout/fragment_ezan_saatleri" >
+        <action
+            android:id="@+id/action_ezanSaatleriFragment_to_aylikEzanFragment"
+            app:destination="@id/aylikEzanFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/aylikEzanFragment"
+        android:name="com.ayberk.universtyapp.AylikEzanFragment"
+        android:label="fragment_aylik_ezan"
+        tools:layout="@layout/fragment_aylik_ezan" />
+    <fragment
+        android:id="@+id/ankaraEzanFragment"
+        android:name="com.ayberk.universtyapp.AnkaraEzanFragment"
+        android:label="fragment_ankara_ezan"
+        tools:layout="@layout/fragment_ankara_ezan" >
+        <action
+            android:id="@+id/action_ankaraEzanFragment_to_ankaraAylikEzanFragment"
+            app:destination="@id/ankaraAylikEzanFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ankaraAylikEzanFragment"
+        android:name="com.ayberk.universtyapp.AnkaraAylikEzanFragment"
+        android:label="fragment_ankara_aylik_ezan"
+        tools:layout="@layout/fragment_ankara_aylik_ezan" />
+</navigation>
